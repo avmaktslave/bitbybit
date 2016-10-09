@@ -1,0 +1,113 @@
+//VARIABLES
+@orange: #e8603c;
+@grey: #b9b9b9;
+//FONTS
+@font-face {
+    font-family: BebasNeue;
+    src: url('../fonts/bebasneue_regular.eot');
+    src: url('../fonts/bebasneue_regular.eot?#iefix') format('embedded-opentype'), url('../fonts/bebasneue_regular.woff2') format('woff2'), url('../fonts/bebasneue_regular.woff') format('woff'), url('../fonts/bebasneue_regular.ttf') format('truetype'), url('../fonts/bebasneue_regular.svg#svgFontName') format('svg');
+}
+
+@font-face {
+    font-family: HelveticaCustom;
+    src: url('../fonts/helveticaneuecyr-medium.eot');
+    src: url('../fonts/helveticaneuecyr-medium.eot?#iefix') format('embedded-opentype'), url('../fonts/helveticaneuecyr-medium.woff2') format('woff2'), url('../fonts/helveticaneuecyr-medium.woff') format('woff'), url('../fonts/helveticaneuecyr-medium.ttf') format('truetype'), url('../fonts/helveticaneuecyr-medium.svg#svgFontName') format('svg');
+}
+
+//COMMON STYLES
+body {
+    font-family: BebasNeue, Arial, sans-serif;
+}
+
+p {
+    font-family: HelveticaCustom, Arial, sans-serif;
+}
+
+a {
+    color: @orange!important;
+    text-decoration: none!important;
+}
+
+//NAVBAR MAIN
+nav.navbar {
+    border: 0;
+    background: transparent;
+    margin: 0;
+    height: 70px;
+    //LOGO
+    h1 {
+        float: left;
+        margin: 0;
+        a.navbar-brand {
+            font-size: 45px;
+            margin-top: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+        span {
+            color: lighten(@orange, 25%);
+        }
+    }
+    //MENU
+    ul {
+        li a {
+            line-height: 45px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 20px;
+            color: @grey!important;
+            padding-left: 9px;
+        }
+        li.active {
+            a,
+            a:hover {
+                color: @orange!important;
+                background: transparent!important;
+            }
+        }
+        a:hover {
+            color: @orange!important;
+        }
+        li:last-child a {
+            padding-right: 0;
+        }
+    }
+}
+
+//SLADER
+#slider {
+    position: relative;
+    #background-strip {
+        background: lighten(@orange, 25%);
+        height: 60px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 5;
+    }
+    .container {
+        z-index: 10;
+        position: relative;
+        background: #fff;
+    }
+    .carousel-indicators {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+        position: static;
+        margin: 0;
+        margin-top: 17px;
+        li {
+            border: 0;
+            width: 15%;
+            margin: 0;
+            height: auto;
+            img {
+                display: block;
+                width: 100%;
+            }
+        }
+    }
+}
